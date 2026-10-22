@@ -1,1 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyFlow | Study Planners for Everyone</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Manrope',sans-serif;
+background:#F8FAFC;
+color:#1E293B;
+line-height:1.6;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+header{
+padding:25px 0;
+background:white;
+border-bottom:1px solid #E5E7EB;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:26px;
+font-weight:800;
+color:#2563EB;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:#475569;
+font-weight:600;
+}
+
+.hero{
+padding:90px 0;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:60px;
+}
+
+.hero h1{
+font-size:56px;
+font-weight:800;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+color:#64748B;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 32px;
+background:#2563EB;
+color:white;
+text-decoration:none;
+border-radius:14px;
+font-weight:700;
+transition:.3s;
+}
+
+.btn:hover{
+background:#1D4ED8;
+}
+
+.hero img{
+width:100%;
+border-radius:24px;
+box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+section{
+padding:90px 0;
+}
+
+.title{
+text-align:center;
+margin-bottom:55px;
+}
+
+.title h2{
+font-size:40px;
+margin-bottom:12px;
+}
+
+.title p{
+color:#64748B;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:24px;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:22px;
+box-shadow:0 8px 25px rgba(15,23,42,.05);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+.icon{
+width:55px;
+height:55px;
+background:#DBEAFE;
+border-radius:16px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+margin-bottom:18px;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.users{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:24px;
+}
+
+.user-card{
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 8px 25px rgba(15,23,42,.05);
+}
+
+.user-card h4{
+margin:15px 0 10px;
+}
+
+.pricing{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px;
+}
+
+.price-card{
+background:white;
+padding:40px;
+border-radius:22px;
+box-shadow:0 8px 25px rgba(15,23,42,.05);
+text-align:center;
+}
+
+.price{
+font-size:46px;
+font-weight:800;
+color:#2563EB;
+margin:15px 0;
+}
+
+.price-card ul{
+list-style:none;
+margin:25px 0;
+}
+
+.price-card li{
+margin:12px 0;
+color:#64748B;
+}
+
+.featured{
+border:2px solid #2563EB;
+transform:scale(1.03);
+}
+
+.cta{
+background:#2563EB;
+color:white;
+text-align:center;
+padding:90px 20px;
+border-radius:28px;
+margin:90px auto;
+max-width:1200px;
+}
+
+.cta h2{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.cta p{
+opacity:.9;
+margin-bottom:30px;
+}
+
+.cta .btn{
+background:white;
+color:#2563EB;
+}
+
+footer{
+padding:35px 0;
+text-align:center;
+color:#64748B;
+}
+
+@media(max-width:768px){
+
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+nav{
+flex-direction:column;
+gap:20px;
+}
+
+nav ul{
+gap:18px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<div class="container">
+<nav>
+
+<div class="logo">StudyFlow</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Features</a></li>
+<li><a href="#">Pricing</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="container hero">
+
+<div>
+
+<h1>Study planners made for everyone.</h1>
+
+<p>
+Stay organized, manage assignments, build better habits,
+and reach your academic goals with beautifully designed
+study planners for students, professionals, and lifelong learners.
+</p>
+
+<a href="#" class="btn">Get Started</a>
+
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=900&q=80" alt="Study Planner">
+</div>
+
+</div>
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="title">
+<h2>Everything you need to stay organized</h2>
+<p>Simple planning tools that help you study smarter every day.</p>
+</div>
+
+<div class="features">
+
+<div class="card">
+<div class="icon">📅</div>
+<h3>Daily Planning</h3>
+<p>Organize classes, homework, and priorities in one place.</p>
+</div>
+
+<div class="card">
+<div class="icon">🎯</div>
+<h3>Goal Tracking</h3>
+<p>Set weekly milestones and monitor your progress effortlessly.</p>
+</div>
+
+<div class="card">
+<div class="icon">⏰</div>
+<h3>Time Management</h3>
+<p>Plan productive study sessions with structured schedules.</p>
+</div>
+
+<div class="card">
+<div class="icon">📖</div>
+<h3>Study Notes</h3>
+<p>Keep important ideas and reminders organized alongside your plans.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="title">
+<h2>Designed for everyone</h2>
+<p>Whether you're learning something new or managing a busy schedule.</p>
+</div>
+
+<div class="users">
+
+<div class="user-card">
+<h3>🎓</h3>
+<h4>Students</h4>
+<p>Balance classes, exams, and assignments with ease.</p>
+</div>
+
+<div class="user-card">
+<h3>💼</h3>
+<h4>Professionals</h4>
+<p>Stay productive while learning new skills.</p>
+</div>
+
+<div class="user-card">
+<h3>🌍</h3>
+<h4>Lifelong Learners</h4>
+<p>Build consistent habits for personal growth.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="title">
+<h2>Choose your planner</h2>
+<p>Flexible options for every learning journey.</p>
+</div>
+
+<div class="pricing">
+
+<div class="price-card">
+
+<h3>Basic</h3>
+
+<div class="price">$0</div>
+
+<ul>
+<li>Weekly Planner</li>
+<li>Task Lists</li>
+<li>Goal Tracker</li>
+</ul>
+
+<a href="#" class="btn">Start Free</a>
+
+</div>
+
+<div class="price-card featured">
+
+<h3>Premium</h3>
+
+<div class="price">$12</div>
+
+<ul>
+<li>Daily Planner</li>
+<li>Monthly Calendar</li>
+<li>Habit Tracker</li>
+<li>Study Templates</li>
+</ul>
+
+<a href="#" class="btn">Get Premium</a>
+
+</div>
+
+<div class="price-card">
+
+<h3>Team</h3>
+
+<div class="price">$29</div>
+
+<ul>
+<li>Shared Planners</li>
+<li>Collaboration</li>
+<li>Group Scheduling</li>
+</ul>
+
+<a href="#" class="btn">Choose Team</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="container">
+
+<div class="cta">
+
+<h2>Start planning smarter today.</h2>
+
+<p>Join thousands of learners who stay organized with StudyFlow.</p>
+
+<a href="#" class="btn">Create Your Planner</a>
+
+</div>
+
+</div>
+
+<footer>
+
+<div class="container">
+
+<p>© 2026 StudyFlow. Study planners for everyone.</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>
